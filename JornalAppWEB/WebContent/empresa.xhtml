@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"> 
+
+<h:head></h:head> 
+<body> 
+<h:form id ="frmTeste">
+        <h:messages id="msgOK"/>
+       
+ 
+        <h3>Inserir </h3>
+        <h:panelGrid border = '1' columns="2" styleClass="panelGrid" rowClasses="panelFirstLine,panelNextLine" >
+            <h:outputLabel for="propuid" value="Codigo" />
+            <h:inputText id="propuid" value="#{empresaweb.empresa.uid}"  style=" width : 325px;"/>
+            <h:outputLabel for="propCnpj" value="Cnpj" />
+            <h:inputText id="propCnpj" value="#{empresaweb.empresa.cnjp}"  style=" width : 332px;"/>
+            <h:outputLabel for="propDiretoresponsavel" value="Diretor" />
+            <h:inputText id="propDiretoresponsavel" value="#{empresaweb.empresa.diretoresponsavel}"  style=" width : 332px;"/>
+            <h:outputLabel for="propNomefantasia" value="Nome Fantasia" />
+            <h:inputText id="propNomefantasia" value="#{empresaweb.empresa.nomefantasia}"  style=" width : 332px;"/>
+            <h:outputLabel for="propRazaosocial" value="Razao social" />
+            <h:inputText id="propRazaosocial" value="#{empresaweb.empresa.razaosocial}"  style=" width : 332px;"/>
+            <h:outputLabel for="propTelefonesede" value="Telefone" />
+            <h:inputText id="propTelefonesede" value="#{empresaweb.empresa.telefonesede}"  style=" width : 332px;"/>
+        </h:panelGrid>
+        <h:panelGrid columns="4">
+            <h:commandButton action="#{empresaweb.salva()}" value="Salvar" />
+            <h:commandButton action="#{empresaweb.busca()}" value="Busca" /> 
+            <h:commandButton action="#{empresaweb.update()}" value="Update" />
+            <h:commandButton action="#{empresaweb.delete()}" value="Excluir" />
+        </h:panelGrid>
+        <br/>
+        
+       
+        <br/>
+    </h:form>   
+</body> 
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"> 
+
+<h:head></h:head> 
+<body> 
+<h:form id ="frmTeste">
+        <h:messages id="msgOK"/>
+       
+ 
+        <h3>Inserir </h3>
+        <h:panelGrid border = '1' columns="2" styleClass="panelGrid" rowClasses="panelFirstLine,panelNextLine" >
+            <h:outputLabel for="propuid" value="Codigo" />
+            <h:inputText id="propuid" value="#{usuarioweb.usuario.uid}"  style=" width : 325px;"/>
+            <h:outputLabel for="propCpf" value="Cpf" />
+            <h:inputText id="propCpf" value="#{usuarioweb.usuario.cpf}"  style=" width : 332px;"/>
+            <h:outputLabel for="propEmail" value="Email" />
+            <h:inputText id="propEmail" value="#{usuarioweb.usuario.email}"  style=" width : 332px;"/>
+            <h:outputLabel for="propNome" value="Nome" />
+            <h:inputText id="propNome" value="#{usuarioweb.usuario.nome}"  style=" width : 332px;"/>
+        </h:panelGrid>
+        <h:panelGrid columns="4">
+            <h:commandButton action="#{usuarioweb.salva()}" value="Salvar" />
+            <h:commandButton action="#{usuarioweb.busca()}" value="Busca" /> 
+            <h:commandButton action="#{usuarioweb.update()}" value="Update" />
+            <h:commandButton action="#{usuarioweb.delete()}" value="Excluir" />
+        </h:panelGrid>
+        <br/>
+        
+       
+        <br/>
+    </h:form>   
+</body> 
+</html>

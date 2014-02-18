@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"> 
+
+<h:head></h:head> 
+<body> 
+<h:form id ="frmTeste">
+        <h:messages id="msgOK"/>
+       
+ 
+        <h3>Inserir </h3>
+        <h:panelGrid border = '1' columns="2" styleClass="panelGrid" rowClasses="panelFirstLine,panelNextLine" >
+            <h:outputLabel for="propuid" value="Codigo" />
+            <h:inputText id="propuid" value="#{funcionarioweb.funcionario.uid}"  style=" width : 325px;"/>
+            <h:outputLabel for="propCargo" value="Cargo" />
+            <h:inputText id="propCargo" value="#{funcionarioweb.funcionario.cargo}"  style=" width : 332px;"/>
+            <h:outputLabel for="propEmail" value="Email" />
+            <h:inputText id="propEmail" value="#{funcionarioweb.funcionario.email}"  style=" width : 332px;"/>
+            <h:outputLabel for="propNome" value="Nome" />
+            <h:inputText id="propNome" value="#{funcionarioweb.funcionario.nome}"  style=" width : 332px;"/>
+        </h:panelGrid>
+        <h:panelGrid columns="4">
+            <h:commandButton action="#{funcionarioweb.salva()}" value="Salvar" />
+            <h:commandButton action="#{funcionarioweb.busca()}" value="Busca" /> 
+            <h:commandButton action="#{funcionarioweb.update()}" value="Update" />
+            <h:commandButton action="#{funcionarioweb.delete()}" value="Excluir" />
+        </h:panelGrid>
+        <br/>
+        
+       
+        <br/>
+    </h:form>   
+</body> 
+</html>
